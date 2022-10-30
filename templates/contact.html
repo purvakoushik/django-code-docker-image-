@@ -1,0 +1,30 @@
+{% extends 'base.html' %} 
+
+{% block title %}Contact Me{% endblock title %}
+
+{% block body %}
+<div class="card text-bg-dark w-50 mx-auto mt-5">
+    <div class="">
+      <img
+        src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29udGFjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+        class="card-img"
+        alt="..."
+      />
+    </div>
+    <div class="card-img-overlay">
+        <form>
+            <div class="mb-3 w-50 mx-auto">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 w-50 mx-auto">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 w-50 mx-auto">
+                <button type="submit" class="btn btn-primary">↗👨‍💻</button>
+            </div>
+          </form>
+    </div>
+  </div>
+{% endblock body %}
