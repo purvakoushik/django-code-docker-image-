@@ -21,7 +21,7 @@ jobs:
       run: docker images
     
     - name: starting a container
-      run: docker run purvakoushik/django_portfolio
+      run: docker run -d -p8080:8000 purvakoushik/django_portfolio
       
     - name: container ran successfully
       run: docker ps -a
