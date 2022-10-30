@@ -26,10 +26,11 @@ jobs:
     - name: container ran successfully
       run: docker ps -a
       
+    - name: getting container id
+      run: psid=$(docker ps -q -l)
+      
     - name: stopping container
-      run: |
-       psid=$(docker ps -q -l)
-       docker stop $psid
+      run: docker stop $psid
      
     - name: checking running containers
       run: docker ps -a
