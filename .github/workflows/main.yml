@@ -1,1 +1,35 @@
+name: Portfolio-website(Django code)
 
+on:
+  workflow_dispatch:    
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Login to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+    - name: pulling image from hub
+      run: docker pull purvakoushik/django_portfolio
+
+    - name: image pulled successfully
+      run: docker images
+    
+    - name: starting a container
+      run: docker run purvakoushik/django_portfolio
+      
+    - name: container ran successfully
+      run: docker ps -a
+      
+    - name: stopping container
+      run: |
+       psid=$(docker ps -q -l)
+       docker stop $psid
+     
+    - name: checking running containers
+      run: docker ps -a
