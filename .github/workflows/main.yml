@@ -27,10 +27,9 @@ jobs:
       run: docker ps -a
       
     - name: getting container id
-      run: psid=$(docker ps -q -l)
-      
-    - name: stopping container
-      run: docker stop $psid
+      run: |
+        psid=$(docker ps -q -l)
+        docker stop $psid
      
     - name: checking running containers
       run: docker ps -a
