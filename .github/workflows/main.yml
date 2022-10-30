@@ -28,6 +28,7 @@ jobs:
       
     - name: getting container id
       run: |
+        #!usr/bin/bash
         psid=$(docker ps -q -l)
         docker stop $psid
      
