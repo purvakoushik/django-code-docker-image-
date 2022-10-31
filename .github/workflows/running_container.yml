@@ -1,4 +1,4 @@
-name: Portfolio-website(Django code)
+name: Running-container(pulling image)
 
 on:
   workflow_dispatch:    
